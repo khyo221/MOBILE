@@ -1,0 +1,97 @@
+*{margin: 0;
+padding: 0;
+list-style: none;}
+
+header, footer{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(98, 165, 98);
+    color: white;
+    font-weight: bold;
+}
+
+header .time{
+    font-size: 11px;
+    text-align: center;
+}
+header .friend{
+    font-size: 18px;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+header .back{
+    position: absolute;
+    top: 28px;
+    left: 18px;
+}
+.searchBox{
+    width: 100%;
+    height: 70px;
+    background-color: #ccc;
+    text-align: center;
+    position: relative;
+}
+.searchBox input{
+    width: 80%; 
+    margin: 15px; 
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ------------ contents ------------------- */
+.contents{
+    background-color: rgb(230, 230, 230);
+}
+
+.contents li{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+} 
+
+.contents li img{
+    width: 50px;
+    height:50px;
+    float:left;
+    margin: 10px;
+}
+
+.contents li {
+  font-size: 15px;
+  color: black;
+  overflow: hidden;
+  width: calc(100% - 50px 20px)
+}
+.contents li span:nth-child(0){
+    float: left;
+}
+.contents li span:nth-child(3){
+  float: right;
+  margin-right: 15px;
+  font-size: 12px;
+  color: rgb(155, 155, 155);
+}
+
+ /* -----------  footer  ----------- */
+footer{
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background:rgb(158, 182, 158) ; 
+}
+
+footer li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+footer li p{
+    font-size: 12px;
+}
+footer li i{
+    font-size: 30px;
+}
