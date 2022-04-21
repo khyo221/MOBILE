@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: rgb(109, 180, 28);
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+
+    background: #ccc;
+    color: white;
+    font-size: 36px;
+}
+
+header .time {
+    font-size: 15px;
+    text-align: center;
+}
+
+header .Album {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .back {
+    position: absolute;
+    top: 28px;
+    left: 18px;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #ccc;
+    text-align: center;
+
+}
+
+.search input {
+    width: 90%;
+    margin: 15px;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.search i {
+    font-size: 20px;
+    color: grey;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-65%);
+}
+
+.today,
+.yesterday {
+    margin-top: 15px;
+    color: grey;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.today div:nth-child(1),
+.yesterday div:nth-child(1) {
+    flex-grow: 1;
+}
+
+
+.todayImg {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.todayImg div {
+    width: 25%;
+    box-sizing: border-box;
+    padding-right: 1px;
+    padding-bottom: 1px;
+
+}
+
+.todayImg div:nth-child(4n) {
+    padding-right: 0px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+footer div {
+    width: 25%;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+#imgsize {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+#imgsize>img {
+    position: absolute;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+
+        #btnGnb {
+            display: none;
+        }
+
+
+        #btnGnb:checked~.gnb {
+            /* display: block; */
+            height: 200px;
+        }
+
+        #btnGnb~.gnb {
+            height: 0;
+            /* display: none; */
+        }
+
+        .header {
+            width: 100%;
+            height: 45px;
+            background-image: url(./mobile_img/header_bg.png);
+            position: relative;
+        }
+
+        .header .home {
+            width: 62px;
+            height: 32px;
+            background-image: url(./mobile_img/left_btn.png);
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            text-indent: -9999px;
+        }
+
+        .header h1 {
+            text-align: center;
+            line-height: 45px;
+            color: white;
+        }
+
+        .header .btnGnb {
+            width: 32px;
+            height: 32px;
+            background: url(./mobile_img/right_btn.png);
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            text-indent: -9999px;
+        }
+
+        .lnb {
+            display: none;
+        }
+
+        .lnb li {
+            width: 20%;
+            height: 35px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            float: left;
+        }
+
+        .footer {
+            width: 100%;
+            height: 45px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            /* 픽스드 속성은 위드 100퍼 생략 안됨 */
+        }
+
+        .gnb {
+            position: absolute;
+            width: 100%;
+            height: 0;
+            background-color: #ccc;
+            overflow: hidden;
+            transition: all 0.2s 0.1s;
+        }
+
+        .gnb li {
+            border-bottom: 1px solid black;
+            padding: 9px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        @media all and (min-width:321px) and (orientation:landscpae){
+            .gnb {display: none;}
+            .btnGnb {display: none;}
+
+            .lnb {
+            display: block;
+            overflow: hidden;
+            }
+
+           .lnb li {
+            width: 20%;
+            height: 35px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            float: left;
+             }
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="btnGnb">
+    <header class="header">
+        <div class="home">home</div>
+        <h1>Mobile</h1>
+        <label for="btnGnb" class="btnGnb">gnb</label>
+    </header>
+
+    <ul class="gnb">
+        <!-- lnb mobile -->
+        <li>gnb01</li>
+        <li>gnb02</li>
+        <li>gnb03</li>
+        <li>gnb04</li>
+        <li>gnb05</li>
+    </ul>
+    <ul class="lnb">
+        <!-- lnb mobile -->
+        <li>lnb01</li>
+        <li>lnb02</li>
+        <li>lnb03</li>
+        <li>lnb04</li>
+        <li>lnb05</li>
+    </ul>
+
+    <footer class="footer">
+        copyright
+    </footer>
+</body>
+
+</html>
+
+<!-- 햄버튼 display논 블록은 트렌지션 사용 불가 -->
+
+<!-- li에 트렌지션주녁ㅇ우 아코디언/ ul에 트렌지션 준 경우 width absol   -->
+<!-- 제일많이 사용 diwth 찌그러짐  기단차 주고 박스 드러오고 박스 떨어지고 -->
+<!-- right줘도 됨-->

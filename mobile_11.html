@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+         *{margin: 0;padding: 0;}
+         .visualMain{
+            width: 100%;
+            height: 400px;
+            background-color: azure;
+            line-height: 400px;
+            font-size: 32px;
+            font-weight: bold;
+         }
+         .banner {}
+         .banner div{
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 100px;
+         }
+         .event{
+            width: 100%;
+            /* overflow: hidden; */
+            display: flex;
+            flex-wrap: wrap;
+            /* wrap으로 바껴야지 자식의width속성 사용가능 */
+
+         }
+         .event div {
+            width: 50%;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 200px;
+            /* float: left; */
+         }
+         @media all and (min-width:321px) and (orientation:landscape){
+             .banenr{display: flex;}
+             /* .banner div{
+                width: 50%;
+                float: left;
+             } */
+             .event {
+                 flex-wrap: nowrap;
+             }
+             /* .event div{
+                 width: 25%;
+             }  */
+         }
+     </style>
+</head>
+<body>
+    
+
+<div class="visualMain">
+    visualMain
+</div>
+<section class="banner">
+    <div>banner01</div>
+    <div>banner02</div>
+</section>
+
+<section class="event">
+    <div>event01</div>
+    <div>event02</div>
+    <div>event03</div>
+    <div>event04</div>
+</section>
+</body>
+</html>

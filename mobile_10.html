@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+
+    <style>
+        * {margin: 0; padding: 0;}
+       /*  calc사용해서 만들기
+        section {
+            width: 100%; height: 100px;
+            overflow: hidden;
+            background-color: #ccc;
+        }
+        .chatImg{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            float: left;
+            margin-right: 10px;
+        }
+        .chatText{
+            width: calc(100% - 100px - 10px);
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            float: left;
+        }
+        .chatText .chatName{
+            width: 70%; height: 98px;
+            background-color: yellow;
+            float: left;
+        }
+        .chatText .chatTime {
+            width: 27% ; height: 98px;
+            background-color: rgb(233, 108, 191);
+            text-align: right;
+            float: right;
+        } */
+        /* 겹겹으로 오버플로우 칠필요없음 가장 큰박스에만  */
+
+        section{
+            width: 100%; height: 100px;
+            background-color: #ccc;
+            display: flex;
+        }
+
+        
+        .chatImg{
+            width: 100px ;height: 100px;
+            border: 1px solid black; box-sizing: border-box;
+            margin-right: 10px;
+        }
+        .chatText{ 
+            flex-grow: 1;
+            /* 1나머지 다채워라 */
+            border: 1px solid black; box-sizing: border-box; 
+            display: flex;
+            /* 이것만 하면 사이즈 안채워짐  */
+        }
+        .chatText .chatName{
+            height: 98px;
+            border: 1px solid black; box-sizing: border-box; 
+            flex-grow: 2;
+            margin-right: 10px
+        }
+        .chatText .chatTime{
+            height: 98px;
+            border: 1px solid black; box-sizing: border-box; 
+            flex-grow: 1;
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+    <section>
+        <div class="chatImg">
+            <img src="" alt="">
+        </div>
+        <div class="chatText">
+            <div class="chatName">Name</div>
+            <div class="chatTime">Time</div>
+        </div>
+    </section>
+
+</body>
+</html>
